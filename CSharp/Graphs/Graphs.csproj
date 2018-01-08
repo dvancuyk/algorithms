@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Authors>Derek Van Cuyk</Authors>
+    <Description>C# Port of the algorithms and structures for the graphs</Description>
+    <Product>Graphs Algorithms</Product>
+    <AssemblyName>Kayllian.Algorithms.Graphs</AssemblyName>
+    <RootNamespace>Kayllian.Algorithms.Graphs</RootNamespace>
+    <PackageId>Kayllian.Algorithms.Graphs</PackageId>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+</Project>
