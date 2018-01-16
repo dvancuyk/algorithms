@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 
 namespace Kayllian.Algorithms.Graphs
 {
@@ -14,7 +15,7 @@ namespace Kayllian.Algorithms.Graphs
     /// </remarks>
     public class Graph
     {
-        private List<int>[] _vertices;
+        private readonly List<int>[] _vertices;
 
         public Graph(int vertices)
         {
@@ -68,6 +69,24 @@ namespace Kayllian.Algorithms.Graphs
             ValidateVertex(vertex);
 
             return _vertices[vertex];
+        }
+
+
+        public override string ToString()
+        {
+            var value = new StringBuilder(Vertices + " vertices, " + Edges + " edges" + Environment.NewLine);
+            for (var current = 0; current < Vertices; current++)
+            {
+                value.Append(current + ":");
+                foreach (var w in Adjacent(current))
+                {
+                    value.Append(" " + w);
+                }
+
+                value.AppendLine();
+            }
+
+            return value.ToString();
         }
     }
 }
