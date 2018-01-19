@@ -1,9 +1,4 @@
-﻿using Kayllian.Algorithms.Graphs;
-using System;
-using System.Collections;
-using System.Linq;
-
-namespace Kayllian.Algorithms.Graphs
+﻿namespace Kayllian.Algorithms.Graphs
 {
     /// <summary>
     /// A basic implementation of the depth first search algorithm using a <see cref="Graph"/>
@@ -11,7 +6,6 @@ namespace Kayllian.Algorithms.Graphs
     public class DepthFirstSearch
     {
         private readonly Graph _graph;
-        private readonly int _vertex;
         private readonly bool[] _marked;
 
         /// <summary>
@@ -22,7 +16,6 @@ namespace Kayllian.Algorithms.Graphs
         public DepthFirstSearch(Graph graph, int vertex)
         {
             _graph = graph;
-            _vertex = vertex;
             _marked = new bool[graph.Vertices];
             Search(vertex);
         }
