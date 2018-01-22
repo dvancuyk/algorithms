@@ -57,5 +57,19 @@ namespace Graphs.Tests
             
             return graph;
         }
+
+        public static Graph Acyclic()
+        {
+            var graph = new Graph(8);
+            graph.AddEdge(0, 1);
+            graph.AddEdge(1, 2);
+            graph.AddEdge(1, 3);
+            graph.AddEdge(2, 4);
+            graph.AddEdge(2, 5);
+            graph.AddEdge(3, 6);
+            graph.AddEdge(3, 7);
+
+            return graph;
+        }
     }
 }
