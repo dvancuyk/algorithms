@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DegreesOf Separation": {
+      "commandName": "Project",
+      "commandLineArgs": "Resources/movies-top-grossing.txt / \"Bacon, Kevin\""
+    }
+  }
+}
