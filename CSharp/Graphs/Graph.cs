@@ -13,7 +13,7 @@ namespace Kayllian.Algorithms.Graphs
     /// N - 1.
     /// 
     /// </remarks>
-    public class Graph
+    public class Graph : IGraph
     {
         private readonly List<int>[] _vertices;
 
