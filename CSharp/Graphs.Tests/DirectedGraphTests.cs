@@ -47,23 +47,39 @@ namespace Graphs.Tests
         }
 
         [Fact]
-        public void AddEdge_NotAddDirectionFromSecondFirst_GivenEdgeIsDirectedFromFirstToSecond()
+        public void ReverseShould_CreateReverseGraph()
         {
             // Arrange
-            var graph = new DirectedGraph(3);
-            const int first = 0,
-                second = 1;
+            var graph = new DirectedGraph(4);
+            graph.AddEdge(0, 1);
+            graph.AddEdge(1, 2);
+            graph.AddEdge(2, 3);
 
             // Act
-            graph.AddEdge(first, second);
+            var reverse = graph.Reverse();
 
             // Assert
-            graph.Edges.Should().Be(1);
-            graph.Adjacent(second)
+            reverse.Adjacent(0)
                 .Should()
-                .NotContain(first)
+                .HaveCount(0, "the vertex 0 should have no edges coming from it");
+
+            reverse.Adjacent(1)
+                .Should()
+                .HaveCount(1, "the vertex 1 should have 1 edge coming from it")
                 .And
-                .HaveCount(0);
+                .Contain(0, "the edge from 1 -> 0 should've been reversed");
+
+            reverse.Adjacent(2)
+                .Should()
+                .HaveCount(1, "the vertex 1 should have 1 edge coming from it")
+                .And
+                .Contain(1, "the edge from 1 -> 2 should've been reversed");
+
+            reverse.Adjacent(3)
+                .Should()
+                .HaveCount(1, "the vertex 1 should have 1 edge coming from it")
+                .And
+                .Contain(2, "the edge from 2 -> 3 should've been reversed");
         }
     }
 }

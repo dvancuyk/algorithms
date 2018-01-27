@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Kayllian.Algorithms.Graphs
 {
@@ -36,6 +37,21 @@ namespace Kayllian.Algorithms.Graphs
         public IEnumerable<int> Adjacent(int vertex)
         {
             return _map[vertex];
+        }
+
+        public DirectedGraph Reverse()
+        {
+            var graph = new DirectedGraph(Vertices);
+
+            for(int current = 0; current < Vertices; current++)
+            {
+                foreach (var vertex in Adjacent(current))
+                {
+                    graph.AddEdge(vertex, current);
+                }
+            }
+
+            return graph;
         }
     }
 }

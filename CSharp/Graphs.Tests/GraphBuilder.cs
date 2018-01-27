@@ -71,5 +71,35 @@ namespace Graphs.Tests
 
             return graph;
         }
+
+        public static DirectedGraph DefaultDirected()
+        {
+            var graph = new DirectedGraph(13);
+            graph.AddEdge(0, 1);
+            graph.AddEdge(0, 5);
+            graph.AddEdge(2, 0);
+            graph.AddEdge(2, 3);
+            graph.AddEdge(3, 2);
+            graph.AddEdge(3, 5);
+            graph.AddEdge(4, 2);
+            graph.AddEdge(4, 3);
+            graph.AddEdge(4, 5);
+            graph.AddEdge(5, 4);
+            graph.AddEdge(6, 0);
+            graph.AddEdge(6, 4);
+            graph.AddEdge(6, 9);
+            graph.AddEdge(7, 6);
+            graph.AddEdge(7, 8);
+            graph.AddEdge(8, 7);
+            graph.AddEdge(8, 9);
+            graph.AddEdge(9, 10);
+            graph.AddEdge(9, 11);
+            graph.AddEdge(10, 12);
+            graph.AddEdge(11, 4);
+            graph.AddEdge(11, 12);
+            graph.AddEdge(12, 9);
+            
+            return graph;
+        }
     }
 }

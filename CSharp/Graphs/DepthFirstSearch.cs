@@ -5,7 +5,7 @@
     /// </summary>
     public class DepthFirstSearch
     {
-        private readonly Graph _graph;
+        private readonly IGraph _graph;
         private readonly bool[] _marked;
 
         /// <summary>
@@ -13,7 +13,7 @@
         /// </summary>
         /// <param name="graph">The graph</param>
         /// <param name="vertex">The initial vertex where the search starts</param>
-        public DepthFirstSearch(Graph graph, int vertex)
+        public DepthFirstSearch(IGraph graph, int vertex)
         {
             _graph = graph;
             _marked = new bool[graph.Vertices];

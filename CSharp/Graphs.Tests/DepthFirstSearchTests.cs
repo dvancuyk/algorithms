@@ -66,5 +66,61 @@ namespace Graphs.Tests
             // Assert
             connectedCount.Should().Be(count);
         }
+
+        [Theory]
+        [InlineData(0, 5)]
+        [InlineData(7, 12)]
+        [InlineData(12, 9)]
+        public void CountShould_ReturnNumberOfConnectedNodes_GivenGraphIsDirected(int vertex, int count)
+        {
+            // Arrange
+            var search = new DepthFirstSearch(GraphBuilder.DefaultDirected(), vertex);
+
+            // Act
+            var connectedCount = search.Count;
+
+            // Assert
+            connectedCount.Should().Be(count);
+        }
+
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        [InlineData(3)]
+        [InlineData(4)]
+        [InlineData(5)]
+        public void MarkedShould_ReturnTrue_GivenVertexIsConnectedAndGraphIsDirected(int vertex)
+        {
+            // Arrange
+            var graph = GraphBuilder.DefaultDirected();
+            var search = new DepthFirstSearch(graph, 0);
+
+            // Act
+            var marked = search.Marked(vertex);
+
+            // Assert
+            marked.Should().BeTrue($"the vertex '{vertex}' should be connected");
+        }
+
+        [Theory]
+        [InlineData(6)]
+        [InlineData(7)]
+        [InlineData(8)]
+        [InlineData(9)]
+        [InlineData(10)]
+        [InlineData(11)]
+        [InlineData(12)]
+        public void MarkedShould_ReturnFalse_GivenNoDirectedPathExists(int vertex)
+        {
+            // Arrange
+            var graph = GraphBuilder.DefaultDirected();
+            var search = new DepthFirstSearch(graph, 0);
+
+            // Act
+            var marked = search.Marked(vertex);
+
+            // Assert
+            marked.Should().BeFalse($"the vertex not '{vertex}' should be connected");
+        }
     }
 }
