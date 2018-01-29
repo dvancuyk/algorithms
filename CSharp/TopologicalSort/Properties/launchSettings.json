@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TopologicalSort": {
+      "commandName": "Project",
+      "commandLineArgs": "Files/classes.txt /"
+    }
+  }
+}

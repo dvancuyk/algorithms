@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Kayllian.Algorithms.Graphs
@@ -7,9 +7,15 @@ namespace Kayllian.Algorithms.Graphs
     public class SymbolGraph
     {
         private readonly IDictionary<string, int> _symbols = new Dictionary<string, int>();
-        private string[] _keys;
+        private readonly string[] _keys;
 
         public SymbolGraph(IReadOnlyCollection<string> records, string delimiter)
+            : this(records, delimiter, (count) => new Graph(count))
+        {
+
+        }
+
+        public SymbolGraph(IReadOnlyCollection<string> records, string delimiter, Func<int, IGraph> createGraph)
         {
             foreach (var record in records)
             {
@@ -22,7 +28,7 @@ namespace Kayllian.Algorithms.Graphs
                 }
             }
 
-            Graph = new Graph(_symbols.Count);
+            Graph = createGraph(_symbols.Count);
             _keys = new string[_symbols.Count];
 
             foreach (var record in records)
@@ -44,7 +50,7 @@ namespace Kayllian.Algorithms.Graphs
         /// <summary>
         /// Gets the underlying graph.
         /// </summary>
-        public Graph Graph { get; }
+        public IGraph Graph { get; }
 
         public bool Contains(string key)
         {
