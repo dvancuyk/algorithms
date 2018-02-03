@@ -1,6 +1,5 @@
-﻿using System;
+﻿using Commons;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Kayllian.Algorithms.Graphs
 {
@@ -31,8 +30,11 @@ namespace Kayllian.Algorithms.Graphs
 
             foreach (var neighbor in graph.Adjacent(vertex))
             {
-                if(!_marked[neighbor])
+                if (!_marked[neighbor])
+                {
+                    DomainEvents.Raise(new EdgeTraversed(vertex, neighbor, "DepthFirstOrder"));
                     Search(graph, neighbor);
+                }
             }
 
             _post.Enqueue(vertex);

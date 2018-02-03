@@ -11,7 +11,7 @@ namespace Kayllian.Algorithms.Graphs
         private int[] edgeTo;
         private bool[] marked;
 
-        public BreadthFirstSearch(Graph graph, int origin)
+        public BreadthFirstSearch(IGraph graph, int origin)
         {
             this.origin = origin;
             edgeTo = new int[graph.Vertices];
@@ -47,7 +47,7 @@ namespace Kayllian.Algorithms.Graphs
             return marked[destination];
         }
 
-        private void Search(Graph graph)
+        private void Search(IGraph graph)
         {
             var queue = new Queue<int>();
             marked[origin] = true;
