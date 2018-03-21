@@ -6,15 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Graphs\Graphs.csproj" />
+    <ProjectReference Include="..\..\src\Graphs\Graphs.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Files\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Files\classes.txt">
+    <None Update="Resources\movies-top-grossing.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

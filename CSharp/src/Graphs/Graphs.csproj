@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Commons\Commons.csproj" />
+    <ProjectReference Include="..\Graphs.Common\Graphs.Common.csproj" />
   </ItemGroup>
 
 </Project>

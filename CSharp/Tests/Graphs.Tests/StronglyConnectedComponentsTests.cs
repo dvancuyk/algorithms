@@ -4,7 +4,7 @@ using Xunit;
 
 namespace Graphs.Tests
 {
-    public class t
+    public class StronglyConnectedComponentsTests
     {
         [Fact]
         public void CountShould_Return5_GivenOnly5ConnectedComponentsExist()

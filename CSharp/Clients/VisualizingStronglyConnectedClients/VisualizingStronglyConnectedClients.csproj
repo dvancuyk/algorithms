@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Graphs\Graphs.csproj" />
+    <ProjectReference Include="..\..\src\Graphs\Graphs.csproj" />
   </ItemGroup>
 
   <ItemGroup>
