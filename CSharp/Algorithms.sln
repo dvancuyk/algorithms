@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Graphs.Tests", "Tests\Graph
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{A905DDDC-D1D8-49BB-94A8-EF6741FC56AC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DegreesOf Separation", "Clients\DegreesOf Separation\DegreesOf Separation.csproj", "{06397C43-3E5B-4D10-9BEC-C2029BAF43AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DegreesOf Senuration", "Clients\DegreesOf Separation\DegreesOf Separation.csproj", "{06397C43-3E5B-4D10-9BEC-C2029BAF43AA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopologicalSort", "Clients\TopologicalSort\TopologicalSort.csproj", "{EDEE16FB-7E8C-4C2A-B200-9C8DA9CB5FB2}"
 EndProject

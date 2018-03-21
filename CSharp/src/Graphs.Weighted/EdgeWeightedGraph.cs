@@ -22,7 +22,21 @@ namespace Graphs.Weighted
 
         public int EdgesCount { get; private set; }
 
-        public IEnumerable<Edge> Edges { get; }
+        public IEnumerable<Edge> Edges 
+        {
+            get
+            {
+                var edges = new List<Edge>();
+                for(int v = 0; v < VerticesCount; v++) {
+                    foreach(var edge in _adjacents[v]) {
+                        if(edge.Other(v) > v)
+                            edges.Add(edge);
+                    }
+                }
+
+                return edges;
+            }
+        }
 
         public void AddEdge(Edge edge)
         {

@@ -1,4 +1,6 @@
 using Graphs.Weighted;
+
+using FluentAssertions;
 using Xunit;
 
 namespace Graph.Weighted.Tests
@@ -32,7 +34,7 @@ namespace Graph.Weighted.Tests
         public void CompareTo_ShouldReturnNegative1_GivenTheOtherEdgeWeightIsLesser()
         {
             // Act
-            var result = LesserEdge.CompareTo(GreaterE = dge);
+            var result = LesserEdge.CompareTo(GreaterEdge);
 
             // Assert
             result.Should().Be(-1);
