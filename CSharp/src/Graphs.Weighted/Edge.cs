@@ -43,5 +43,28 @@ namespace Graphs.Weighted
         {
             return Weight.CompareTo(other.Weight);
         }
+
+        public override int GetHashCode()
+        {
+            var hash = 17;
+            hash = 31 * hash + v.GetHashCode();
+            hash = 31 * hash + w.GetHashCode();
+            hash = 31 * hash + Weight.GetHashCode();
+
+            return hash;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (!(obj is Edge edge))
+                return false;
+            
+            return edge.v == v && edge.w == w && Math.Abs(Weight - edge.Weight) < .01;
+        }
+
+        public override string ToString()
+        {
+            return $"{v} -> {w} ({Weight})";
+        }
     }
 }

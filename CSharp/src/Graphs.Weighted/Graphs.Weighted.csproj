@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Sorting.PriorityQueue\Sorting.PriorityQueue.csproj" />
     <ProjectReference Include="..\Commons\Commons.csproj" />
     <ProjectReference Include="..\Graphs.Common\Graphs.Common.csproj" />
   </ItemGroup>

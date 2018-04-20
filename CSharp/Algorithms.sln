@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2036
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Graphs", "src\Graphs\Graphs.csproj", "{0C13BFC3-8724-49C6-A258-CF9A2253AA8D}"
 EndProject
@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Graphs.Tests", "Tests\Graph
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{A905DDDC-D1D8-49BB-94A8-EF6741FC56AC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DegreesOf Senuration", "Clients\DegreesOf Separation\DegreesOf Separation.csproj", "{06397C43-3E5B-4D10-9BEC-C2029BAF43AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DegreesOf Separation", "Clients\DegreesOf Separation\DegreesOf Separation.csproj", "{06397C43-3E5B-4D10-9BEC-C2029BAF43AA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopologicalSort", "Clients\TopologicalSort\TopologicalSort.csproj", "{EDEE16FB-7E8C-4C2A-B200-9C8DA9CB5FB2}"
 EndProject
@@ -19,11 +19,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisualizingStronglyConnecte
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Commons", "src\Commons\Commons.csproj", "{0A50610C-69FB-4EAC-B9CE-16A3E9D99B88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphs.Common", "src\Graphs.Common\Graphs.Common.csproj", "{58A40266-B664-41B7-AB23-06A92A26F20F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Graphs.Common", "src\Graphs.Common\Graphs.Common.csproj", "{58A40266-B664-41B7-AB23-06A92A26F20F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphs.Weighted", "src\Graphs.Weighted\Graphs.Weighted.csproj", "{317B2E9E-8FF2-4B6D-A65E-49C3330ED1F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Graphs.Weighted", "src\Graphs.Weighted\Graphs.Weighted.csproj", "{317B2E9E-8FF2-4B6D-A65E-49C3330ED1F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph.Weighted.Tests", "Tests\Graph.Weighted.Tests\Graph.Weighted.Tests.csproj", "{A576A768-BDF3-471C-AB1C-AC748B76DFCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Graph.Weighted.Tests", "Tests\Graph.Weighted.Tests\Graph.Weighted.Tests.csproj", "{A576A768-BDF3-471C-AB1C-AC748B76DFCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorting.PriorityQueue", "Sorting.PriorityQueue\Sorting.PriorityQueue.csproj", "{9C7A90A6-D8AA-411A-B332-88E31B6BE230}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorting.PriorityQueue.Tests", "Sorting.PriorityQueue.Tests\Sorting.PriorityQueue.Tests.csproj", "{1B1622D5-3EC6-485A-A09F-9D262D1F05B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +109,22 @@ Global
 		{A576A768-BDF3-471C-AB1C-AC748B76DFCC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A576A768-BDF3-471C-AB1C-AC748B76DFCC}.Release|x64.ActiveCfg = Release|Any CPU
 		{A576A768-BDF3-471C-AB1C-AC748B76DFCC}.Release|x64.Build.0 = Release|Any CPU
+		{9C7A90A6-D8AA-411A-B332-88E31B6BE230}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C7A90A6-D8AA-411A-B332-88E31B6BE230}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C7A90A6-D8AA-411A-B332-88E31B6BE230}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9C7A90A6-D8AA-411A-B332-88E31B6BE230}.Debug|x64.Build.0 = Debug|Any CPU
+		{9C7A90A6-D8AA-411A-B332-88E31B6BE230}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C7A90A6-D8AA-411A-B332-88E31B6BE230}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C7A90A6-D8AA-411A-B332-88E31B6BE230}.Release|x64.ActiveCfg = Release|Any CPU
+		{9C7A90A6-D8AA-411A-B332-88E31B6BE230}.Release|x64.Build.0 = Release|Any CPU
+		{1B1622D5-3EC6-485A-A09F-9D262D1F05B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B1622D5-3EC6-485A-A09F-9D262D1F05B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B1622D5-3EC6-485A-A09F-9D262D1F05B3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1B1622D5-3EC6-485A-A09F-9D262D1F05B3}.Debug|x64.Build.0 = Debug|Any CPU
+		{1B1622D5-3EC6-485A-A09F-9D262D1F05B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B1622D5-3EC6-485A-A09F-9D262D1F05B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B1622D5-3EC6-485A-A09F-9D262D1F05B3}.Release|x64.ActiveCfg = Release|Any CPU
+		{1B1622D5-3EC6-485A-A09F-9D262D1F05B3}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -115,6 +135,7 @@ Global
 		{EDEE16FB-7E8C-4C2A-B200-9C8DA9CB5FB2} = {A905DDDC-D1D8-49BB-94A8-EF6741FC56AC}
 		{A714FD9F-0705-492F-A0CC-CC4E2DECBB2E} = {A905DDDC-D1D8-49BB-94A8-EF6741FC56AC}
 		{A576A768-BDF3-471C-AB1C-AC748B76DFCC} = {E24A2BDD-59D5-483B-943C-EBEF68E6DCC8}
+		{1B1622D5-3EC6-485A-A09F-9D262D1F05B3} = {E24A2BDD-59D5-483B-943C-EBEF68E6DCC8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5E8C8676-B430-47CD-B0EC-E7D752C79013}

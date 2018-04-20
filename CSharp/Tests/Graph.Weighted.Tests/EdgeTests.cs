@@ -11,6 +11,7 @@ namespace Graph.Weighted.Tests
         private static readonly Edge GreaterEdge = new Edge(1, 2, 1.5);
 
         [Fact]
+        [Trait("Category", "Unit")]
         public void CompareTo_ShouldReturnNegativeOne_GivenTheOtherEdgeWeightIsGreater()
         {
             // Act
@@ -21,6 +22,7 @@ namespace Graph.Weighted.Tests
         }
 
         [Fact]
+        [Trait("Category", "Unit")]
         public void CompareTo_Should0_GivenTheOtherEdgeWeightIsEqual()
         {
             // Act
@@ -31,6 +33,7 @@ namespace Graph.Weighted.Tests
         }
 
         [Fact]
+        [Trait("Category", "Unit")]
         public void CompareTo_ShouldReturnNegative1_GivenTheOtherEdgeWeightIsLesser()
         {
             // Act
@@ -38,6 +41,66 @@ namespace Graph.Weighted.Tests
 
             // Assert
             result.Should().Be(-1);
+        }
+
+        [Fact]
+        [Trait("Category", "Unit")]
+        public void Equals_ShouldReturnTrue_GivenEdgeRepresentsSameEdge()
+        {
+            // Arrange
+            var edge = new Edge(0, 1, 1.3);
+            var second = new Edge(0, 1, 1.3);
+
+            // Act
+            var equals = edge.Equals(second);
+
+            // Assert
+            equals.Should().BeTrue();
+        }
+
+        [Fact]
+        [Trait("Category", "Unit")]
+        public void Equals_ShouldReturnFalse_GivenVertexIsDifferent()
+        {
+            // Arrange
+            var edge = new Edge(0, 1, 1.3);
+            var second = new Edge(2, 1, 1.3);
+
+            // Act
+            var equals = edge.Equals(second);
+
+            // Assert
+            equals.Should().BeFalse();
+        }
+
+        [Fact]
+        [Trait("Category", "Unit")]
+        public void Equals_ShouldReturnFalse_GivenSecondVertexIsDifferent()
+        {
+            // Arrange
+            var edge = new Edge(0, 1, 1.3);
+            var second = new Edge(0, 2, 1.3);
+
+            // Act
+            var equals = edge.Equals(second);
+
+            // Assert
+            equals.Should().BeFalse();
+        }
+
+        [Fact]
+        [Trait("Category", "Unit")]
+        public void Equals_ShouldReturnFalse_GivenWeightIsDifferent()
+        {
+            // Arrange
+            var edge = new Edge(0, 1, 1.3);
+            var second = new Edge(0, 1, 1.4);
+
+            // Act
+            var equals = edge.Equals(second);
+
+            // Assert
+            equals.Should().BeFalse();
         }
     }
 }
