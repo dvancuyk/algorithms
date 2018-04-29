@@ -9,6 +9,12 @@ namespace Sorting.PriorityQueue
     public class MaxPriorityQueue<T> : PriorityQueue<T>
         where T : IComparable<T>
     {
+
+        public MaxPriorityQueue()
+        {
+
+        }
+
         public MaxPriorityQueue(int max)
          : base(max)
         {

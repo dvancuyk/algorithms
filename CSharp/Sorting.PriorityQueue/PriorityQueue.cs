@@ -1,17 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Sorting.PriorityQueue
 {
     public abstract class PriorityQueue<T>
         where T : IComparable<T>
     {
-        private readonly T[] _pq;
+        private readonly List<T> _pq;
+
+        protected PriorityQueue()
+        {
+            _pq = new List<T> {default(T)};
+        }
 
         protected PriorityQueue(int max)
         {
-            _pq = new T[max + 1];
+            _pq = new List<T>(max + 1) {default(T)};
         }
 
         protected PriorityQueue(IReadOnlyList<T> keys)
@@ -26,7 +30,7 @@ namespace Sorting.PriorityQueue
         /// <summary>
         /// Gets the number of keys currently in the queue.
         /// </summary>
-        public int Count { get; private set; }
+        public int Count => _pq.Count - 1;
 
         /// <summary>
         /// Returns a <seealso cref="bool"/> indicating if the queue is currently empty.
@@ -55,8 +59,8 @@ namespace Sorting.PriorityQueue
         public T DeleteMax()
         {
             var key = Max;
-            Exchange(1, Count--);
-            _pq[Count + 1] = default(T);
+            Exchange(1, Count);
+            _pq.RemoveAt(Count);
             Sink(1);
 
             return key;
@@ -64,8 +68,10 @@ namespace Sorting.PriorityQueue
 
         public void Insert(T key)
         {
-            _pq[++Count] = key;
-            Swim(Count);
+            var index = _pq.Count;
+
+            _pq.Insert(index, key);
+            Swim(_pq.Count - 1);
         }
 
         /// <summary>

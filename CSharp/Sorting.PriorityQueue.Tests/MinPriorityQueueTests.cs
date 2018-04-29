@@ -41,6 +41,32 @@ namespace Sorting.PriorityQueue.Tests
 
         [Fact]
         [Trait("Category", "Unit")]
+        public void DeleteMax_ShouldDeletePrimaryCandidate_GivenDeleteMaxIsCalledMultipleTimes()
+        {
+            // Arrange
+            const double min = .04;
+            var candidates = new[] { 1.1, 900.2, 5.5, 300.1, min, .2, 7.9 };
+            var priority = new MinPriorityQueue<double>(candidates);
+            var previousKey = double.MinValue;
+
+            // Act
+            while (!priority.IsEmpty)
+            {
+                var key = priority.DeleteMax();
+
+                // Assert
+                key.Should()
+                    .BeGreaterOrEqualTo(previousKey);
+
+                if(priority.Count > 0)
+                    key.Should().BeLessOrEqualTo(priority.Max);
+
+                previousKey = key;
+            }
+        }
+
+        [Fact]
+        [Trait("Category", "Unit")]
         public void DeleteMax_ShouldReturnMaxAndRemoveFromQueue()
         {
             // Arrange

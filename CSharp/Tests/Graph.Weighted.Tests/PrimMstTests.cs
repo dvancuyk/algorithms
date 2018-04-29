@@ -1,11 +1,10 @@
-using System.Collections.Generic;
 using FluentAssertions;
 using Graphs.Weighted;
 using Xunit;
 
 namespace Graph.Weighted.Tests
 {
-    public class MinimalSpanningTreeTests
+    public class PrimMstTests
     {
         [Fact]
         [Trait("Category", "Unit")]
@@ -16,7 +15,7 @@ namespace Graph.Weighted.Tests
             var graph = WeightedGraphBuilder.Basic();
             
             // Act
-            var mst = new MinimalSpanningTree(graph);
+            var mst = new PrimMst(graph);
 
             // Assert
             mst.Weight.Should().Be(expectedWeight);
@@ -40,7 +39,7 @@ namespace Graph.Weighted.Tests
             };
 
             // Act
-            var mst = new MinimalSpanningTree(graph);
+            var mst = new PrimMst(graph);
 
             // Assert
             mst.Edges.Should().Contain(expected);

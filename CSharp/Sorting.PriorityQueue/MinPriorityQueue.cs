@@ -6,6 +6,11 @@ namespace Sorting.PriorityQueue
     public class MinPriorityQueue<T> : PriorityQueue<T>
         where T : IComparable<T>
     {
+        public MinPriorityQueue()
+        {
+            
+        }
+
         public MinPriorityQueue(int max)
             : base(max)
         {
