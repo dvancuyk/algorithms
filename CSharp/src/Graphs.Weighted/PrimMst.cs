@@ -15,6 +15,7 @@ namespace Graphs.Weighted
 
         public PrimMst(EdgeWeightedGraph graph)
         {
+            throw new System.NotImplementedException();
             _distanceTo = new double[graph.VerticesCount];
             _edgeTo= new Edge[graph.VerticesCount - 1];
 
@@ -25,7 +26,7 @@ namespace Graphs.Weighted
 
             _distanceTo[0] = 0.0;
             var pq = new MinPriorityQueue<double>();
-            pq.Insert(0, _distanceTo[0]);
+            //pq.Insert(0, _distanceTo[0]);
             Visit(0, graph, pq);
         }
 
@@ -41,11 +42,11 @@ namespace Graphs.Weighted
 
         private void Visit(int v, EdgeWeightedGraph graph, MinPriorityQueue<double> pq)
         {
-            
-            foreach (var edges in graph.Adjacent(v))
-            {
-                pq.Insert(edges);
-            }
+            throw new System.NotImplementedException();
+            //foreach (var edges in graph.Adjacent(v))
+            //{
+            //    pq.Insert(edges);
+            //}
         }
     }
 }

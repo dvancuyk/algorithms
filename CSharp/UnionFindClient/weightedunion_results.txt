@@ -1,0 +1,19 @@
+
+Welcome to .NET Core!
+---------------------
+Learn more about .NET Core @ https://aka.ms/dotnet-docs. Use dotnet --help to see available commands or go to https://aka.ms/dotnet-cli-docs.
+
+Telemetry
+--------------
+The .NET Core tools collect usage data in order to improve your experience. The data is anonymous and does not include command-line arguments. The data is collected by Microsoft and shared with the community.
+You can opt out of telemetry by setting a DOTNET_CLI_TELEMETRY_OPTOUT environment variable to 1 using your favorite shell.
+You can read more about .NET Core tools telemetry @ https://aka.ms/dotnet-cli-telemetry.
+Testing size: tiny, Count: 12
+	Memory Size = 940kb
+	Elapsed Time = 00:00:00.0015039
+Testing size: medium, Count: 901
+	Memory Size = 960kb
+	Elapsed Time = 00:00:00.0004538
+Testing size: large, Count: 2000001
+	Memory Size = 162196kb
+	Elapsed Time = 00:00:01.0410767

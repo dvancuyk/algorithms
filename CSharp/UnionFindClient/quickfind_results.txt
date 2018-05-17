@@ -1,0 +1,9 @@
+Testing size: tiny, Count: 12
+	Memory Size = 848kb
+	Elapsed Time = 00:00:00.0007334
+Testing size: medium, Count: 901
+	Memory Size = 960kb
+	Elapsed Time = 00:00:00.0015966
+Testing size: large, Count: 2000001
+	Memory Size = 156736kb
+	Elapsed Time = 01:12:04.8303542
